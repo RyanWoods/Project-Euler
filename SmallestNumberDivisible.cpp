@@ -92,24 +92,6 @@ void NumOfPrimes( float numOfInts, vector<float>* ints) {
 		}
 	}
 	
-	vector<float> primeshere;
-	vector<float>* primes = &primeshere;
-	int k = 0;
-
-	// This loop assigns all of the primes in order
-	// to the primeshere vector.
-	for (float i = 0; i<numOfInts; i++) {
-		if (ints->at(i) != 0) {
-		primes->push_back(ints->at(i));
-		k++;
-		} 
-	}
-
-	// This loop prints primeshere out
-	// uncomment to print out the primes
-	//for (float i = 0; i<k; i++) {
-	//	cout << primes->at(i) << endl;
-	//}
 	return;
 }
 /*********************************************************/
@@ -147,7 +129,6 @@ float PrimeFactor(float numOfInt, vector<float>* pows, vector<float>* ints)
 		pows->push_back(0);
 	}
 	for (int i = 0; i < ints->size(); i++) {
-	cout << "ints " << ints->at(i) << endl;
 	}
 	// This loop moves from 2 to n
         for (int i = 1; i <= numOfInt; i++) 
@@ -160,7 +141,6 @@ float PrimeFactor(float numOfInt, vector<float>* pows, vector<float>* ints)
 		// This loop finds the prime factors for each number i
 		for (int j = 1; j < ints->size(); j++) 
 		{
-			cout << "j is: " << j << "and ints is: " << ints->at(j) << endl;
 			if (ints->at(j) != 0) 
 			{
 				// determines if k % ints->at(j) = 0
