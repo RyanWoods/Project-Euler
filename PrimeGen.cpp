@@ -49,7 +49,6 @@ vector<int>::iterator primes (int n, vector<int>* ints)
 		m=2*i+3;
 	}
 	ints->insert(ints->begin(), 2);
-	remove_if(ints->begin(),ints->end(), IsZero);
 	vector<int>::iterator l; 
 	l = ints->erase(remove_if(ints->begin(), ints->end(), IsZero), ints->end());
 	return l;
