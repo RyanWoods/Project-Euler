@@ -42,20 +42,20 @@ int main()
 
 	cout << "Please enter an integer greater than 1" << endl;
 
-	cin >> numOfInt;
-	
+	//cin >> numOfInt;
+	numOfInt = 1000000;
 	vector<float> integers;
 	vector<float>* ints = &integers;
 
-	vector<float> powers;
-	vector<float>* pows = &powers;
+	//vector<float> powers;
+	//vector<float>* pows = &powers;
 	
-	float answer = 0.0;
+	//float answer = 0.0;
 	
 	NumOfPrimes( numOfInt, ints);
-	cout << "This is inbetween NumOfPrimes and PrimeFactor" << endl;	
+	//cout << "This is inbetween NumOfPrimes and PrimeFactor" << endl;	
 
-	answer = PrimeFactor(numOfInt, pows, ints);
+	//answer = PrimeFactor(numOfInt, pows, ints);
 	return 0;
 }
 
@@ -89,9 +89,22 @@ void NumOfPrimes( float numOfInts, vector<float>* ints) {
 		float k = j + j;
 		for (k; k<= numOfInts; k=k+j) {			
 				ints->at(k-1) = 0;			
+		}	
+	}
+	int n = 0;
+	for (int m = 0; m < numOfInts; m++) 
+	{
+		if (ints->at(m) != 0) {
+			ints->at(n) = ints->at(m);
+			cout << ints->at(n) << endl;
+			n++;
 		}
 	}
+	//for (int i = 0; i < n; i++) {
+	//	cout << ints->at(i) << endl;
+	//}
 	
+  	cout << n << endl;	
 	return;
 }
 /*********************************************************/
